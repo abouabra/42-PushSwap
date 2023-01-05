@@ -6,7 +6,7 @@
 /*   By: abouabra < abouabra@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:31:38 by abouabra          #+#    #+#             */
-/*   Updated: 2023/01/05 19:06:59 by abouabra         ###   ########.fr       */
+/*   Updated: 2023/01/05 19:14:38 by abouabra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,6 @@ void	end_phase(t_args *vars)
 	ft_node_clear(&vars->a_head);
 	ft_node_clear(&vars->b_head);
 	free(vars->tmp_arr);
+	free(vars->sorted_arr);
 	free(vars);
 }
