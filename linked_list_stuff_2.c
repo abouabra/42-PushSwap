@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atol.c                                          :+:      :+:    :+:   */
+/*   linked_list_stuff_2.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouabra < abouabra@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/04 18:14:16 by abouabra          #+#    #+#             */
-/*   Updated: 2023/01/05 18:48:40 by abouabra         ###   ########.fr       */
+/*   Created: 2023/01/04 19:15:20 by abouabra          #+#    #+#             */
+/*   Updated: 2023/01/05 19:08:01 by abouabra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-long	ft_atol(char *str)
+int	ft_node_size(t_node **head)
 {
+	t_node	*tmp;
 	int		i;
-	int		sign;
-	long	final;
 
 	i = 0;
-	sign = 1;
-	final = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	tmp = *head;
+	while (tmp)
 	{
-		if (str[i] == '-')
-			sign *= -1;
 		i++;
+		tmp = tmp->next;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		final = final * 10 + str[i] - '0';
-		i++;
-	}
-	return (final * sign);
+	return (i);
 }

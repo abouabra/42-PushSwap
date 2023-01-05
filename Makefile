@@ -1,6 +1,6 @@
-SRC = push_swap.c sort_3_numbers.c sort_less_than_10_numbers.c make_move.c sort_big_numbers.c make_move_utils.c
+SRC = push_swap.c sort_3_numbers.c sort_less_than_10_numbers.c make_move.c sort_big_numbers.c make_move_for_big.c
 BSRC = checker.c
-GSRC = check_args.c check_args_utils.c actions.c actions_2.c actions_3.c ft_atol.c extract_args.c linked_list_stuff.c
+GSRC = check_args.c check_args_utils.c actions.c actions_2.c actions_3.c ft_atol.c extract_args.c linked_list_stuff.c linked_list_stuff_2.c
 
 OSRC=$(SRC:.c=.o)
 OBSRC=$(BSRC:.c=.o)
