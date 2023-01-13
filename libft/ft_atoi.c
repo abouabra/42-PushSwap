@@ -33,6 +33,5 @@ int	ft_atoi(char *str)
 		final = final * 10 + str[i] - '0';
 		i++;
 	}
-	
 	return (final * sign);
 }
