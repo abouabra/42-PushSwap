@@ -6,7 +6,7 @@
 /*   By: abouabra < abouabra@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:31:57 by abouabra          #+#    #+#             */
-/*   Updated: 2023/01/05 10:48:29 by abouabra         ###   ########.fr       */
+/*   Updated: 2023/01/13 15:25:41 by abouabra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	rra(t_args *vars, int is_print)
 	t_node	*last_element;
 	t_node	*before_last;
 
-	if (!vars->a_head)
+	if (!vars->a_head || ft_node_size(&vars->a_head) <= 1)
 		return ;
 	last_element = ft_last_node(vars->a_head);
 	before_last = vars->a_head;
@@ -34,7 +34,7 @@ void	rrb(t_args *vars, int is_print)
 	t_node	*last_element;
 	t_node	*before_last;
 
-	if (!vars->b_head)
+	if (!vars->b_head || ft_node_size(&vars->b_head) <= 1)
 		return ;
 	last_element = ft_last_node(vars->b_head);
 	before_last = vars->b_head;
@@ -48,7 +48,8 @@ void	rrb(t_args *vars, int is_print)
 
 void	rrr(t_args *vars, int is_print)
 {
-	if (!vars->b_head || !vars->a_head)
+	if (!vars->b_head || !vars->a_head || ft_node_size(&vars->b_head) <= 1
+		|| ft_node_size(&vars->a_head) <= 1)
 		return ;
 	rra(vars, 0);
 	rrb(vars, 0);

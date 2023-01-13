@@ -6,7 +6,7 @@
 /*   By: abouabra < abouabra@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 16:53:17 by abouabra          #+#    #+#             */
-/*   Updated: 2023/01/11 11:12:32 by abouabra         ###   ########.fr       */
+/*   Updated: 2023/01/13 16:30:03 by abouabra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct t_node
 typedef struct t_args
 {
 	long			*tmp_arr;
+	char			**instructions_bonus;
 	long			*sorted_arr;
 	int				args_counter;
 	t_node			*a_head;
@@ -75,5 +76,8 @@ t_node				*get_biggest_node(t_args *vars);
 void				send_biggest_to_top(t_args *vars);
 int					ft_node_size(t_node **head);
 void				make_move_in_chunk(t_args *vars);
+
+int					check_instruction_4(t_args *vars, char *tmp, int i);
+int					check_instruction_3(t_args *vars, char *tmp, int i);
 
 #endif

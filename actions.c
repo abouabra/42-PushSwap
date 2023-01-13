@@ -6,7 +6,7 @@
 /*   By: abouabra < abouabra@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:31:57 by abouabra          #+#    #+#             */
-/*   Updated: 2023/01/05 15:57:29 by abouabra         ###   ########.fr       */
+/*   Updated: 2023/01/13 15:25:51 by abouabra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	sa(t_args *vars, int is_print)
 	t_node	*second_element;
 	t_node	*third_element;
 
-	if (!vars->a_head)
+	if (!vars->a_head || ft_node_size(&vars->a_head) <= 1)
 		return ;
 	first_element = vars->a_head;
 	second_element = first_element->next;
@@ -38,7 +38,7 @@ void	sb(t_args *vars, int is_print)
 	t_node	*second_element;
 	t_node	*third_element;
 
-	if (!vars->b_head)
+	if (!vars->b_head || ft_node_size(&vars->b_head) <= 1)
 		return ;
 	first_element = vars->b_head;
 	second_element = first_element->next;
@@ -52,7 +52,8 @@ void	sb(t_args *vars, int is_print)
 
 void	ss(t_args *vars, int is_print)
 {
-	if (!vars->b_head || !vars->a_head)
+	if (!vars->b_head || !vars->a_head || ft_node_size(&vars->b_head) <= 1
+		|| ft_node_size(&vars->a_head) <= 1)
 		return ;
 	sa(vars, 0);
 	sb(vars, 0);
