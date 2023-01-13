@@ -6,7 +6,7 @@
 /*   By: abouabra < abouabra@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 18:14:16 by abouabra          #+#    #+#             */
-/*   Updated: 2023/01/05 18:48:40 by abouabra         ###   ########.fr       */
+/*   Updated: 2023/01/13 13:11:54 by abouabra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,7 @@ long	ft_atol(char *str)
 		final = final * 10 + str[i] - '0';
 		i++;
 	}
+	if(str[i])
+		return 0;
 	return (final * sign);
 }

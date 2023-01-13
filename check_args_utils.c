@@ -6,7 +6,7 @@
 /*   By: abouabra < abouabra@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:31:38 by abouabra          #+#    #+#             */
-/*   Updated: 2023/01/05 19:14:38 by abouabra         ###   ########.fr       */
+/*   Updated: 2023/01/13 12:51:38 by abouabra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,14 @@ int	ft_is_number(char *str)
 {
 	int	i;
 
-	i = -1;
-	while (str[++i])
+	i = 0;
+	if(str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i])
 	{
 		if (!ft_isdigit(str[i]))
 			return (0);
+		i++;
 	}
 	return (1);
 }

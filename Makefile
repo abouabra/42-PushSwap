@@ -27,7 +27,7 @@ $(NAME): $(OSRC) $(OGSRC)
 bonus: $(OBSRC) $(OGSRC)
 	@make -C libft
 	@$(CC) -Wall -Wextra -Werror $(INCLUDE) $^ libft/libft.a -o $(BONUS)
-	@printf "$(RED)--------PUSH SWAP DONE--------$(RESET)\n"
+	@printf "$(BLUE)--------CHECKER DONE--------$(RESET)\n"
 
 %.o : %.c
 	@printf "hana kan compili f$(GREEN) $< $(RESET) \n"
