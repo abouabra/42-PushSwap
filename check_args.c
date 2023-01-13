@@ -6,7 +6,7 @@
 /*   By: abouabra < abouabra@student.1337.ma >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:31:38 by abouabra          #+#    #+#             */
-/*   Updated: 2023/01/13 12:51:57 by abouabra         ###   ########.fr       */
+/*   Updated: 2023/01/13 13:16:57 by abouabra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ int	check_is_duplicated_num(t_args *vars)
 	}
 	return (1);
 }
+
 int	check_args(t_args *vars, int ac, char **av)
 {
 	vars->args_counter = count_args(av);
