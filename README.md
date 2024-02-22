@@ -43,6 +43,13 @@ cd 42-PushSwap
 make
 ```
 
+### Note
+
+if you want to compile the checker program, run the following command:
+```bash
+make bonus
+```
+
 
 ## Usage
 
