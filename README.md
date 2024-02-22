@@ -3,7 +3,7 @@
 ## Description
 
 PushSwap is a project that consists of sorting a stack of integers using two stacks and a limited set of operations. The goal is to sort the stack in the least amount of operations.
-
+this project is part of the 42 school curriculum. it aims to teach the students how to work with linked lists and to optimize their algorithms.
 
 
 ## Project Structure
